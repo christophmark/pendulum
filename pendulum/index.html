@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>PENDULUM - the game</title>
+
+	<link rel="icon" sizes="192x192" href="touch-icon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js"></script>
+    
+	<script src="boot.js"></script>
+	<script src="preloader.js"></script>
+	<script src="mainmenu.js"></script>
+	<script src="level.js"></script>
+    
+    <script src="style.js"></script>
+    <script src="items.js"></script>
+    <script src="platforms.js"></script>
+    <script src="weapons.js"></script>
+    <script src="player.js"></script>
+    <script src="hud.js"></script>
+
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+	<script type="text/javascript">
+		window.cookieconsent_options = {"message": "This website uses cookies and similar techniques (HTML5 local storage) to save your progress in the game PENDULUM. By continuing to use the site, you are agreeing to our use of cookies and similar techniques.", "dismiss":"I understand!", "learnMore":"Learn more about cookies.", "link":"http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm", "theme":"dark-floating"};
+	</script>
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+	<!-- End Cookie Consent plugin -->
+</head>
+<body bgcolor="#000000">
+
+<div id="gameContainer"></div>
+<div><p style="color:#7f7f7f; font-family:Arial, sans-serif; text-align:center;">&copy; 2017 CHRISTOPH MARK</p></div>
+<div><p style="color:#7f7f7f; font-family:Arial, sans-serif; text-align:center; width:70%; margin-left:15%;">THE WEBSITE/GAME IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WEBSITE/GAME OR THE USE OR OTHER DEALINGS IN THE WEBSITE/GAME.</p></div>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	var game = new Phaser.Game(1366, 768, Phaser.CANVAS, 'gameContainer');
+
+	game.state.add('Boot', BasicGame.Boot);
+	game.state.add('Preloader', BasicGame.Preloader);
+	game.state.add('MainMenu', BasicGame.MainMenu);
+	game.state.add('Level', BasicGame.Level);
+
+	game.state.start('Boot');
+};
+
+</script>
+
+</body>
+</html>
