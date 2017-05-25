@@ -1,6 +1,6 @@
 # pendulum
 
-A physics-inspired 2D browser game for both mobile and desktop that involves an alien swinging from a rope to avoid obstacles in randomly generated, fully destructible levels. [Click here to play!](https://raw.githubusercontent.com/christophmark/pendulum/master/pendulum/index.html)
+A physics-inspired 2D browser game for both mobile and desktop that involves an alien swinging from a rope to avoid obstacles in randomly generated, fully destructible levels. [Click here to play!](https://christophmark.github.io/pendulum/pendulum/index.html)
 
 ![demo-video](https://raw.githubusercontent.com/christophmark/pendulum/master/demo/demo-video.gif)
 
